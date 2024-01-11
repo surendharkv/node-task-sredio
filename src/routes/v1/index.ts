@@ -1,6 +1,7 @@
 import express from 'express';
 import userRoute from './user.route';
 import docsRoute from './docs.route';
+import gitRoute from './git.route';
 import { APP_ENV } from '../../config/config';
 
 const v1Route = express.Router();
@@ -9,6 +10,10 @@ const defaultRoutes = [
   {
     path: '/users',
     route: userRoute,
+  },
+  {
+    path: '/git',
+    route: gitRoute,
   },
 ];
 

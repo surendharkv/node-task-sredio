@@ -11,12 +11,96 @@ components:
       example:
         username: tester
         email: tester@gmail.com
+    GitUser:
+      type: object
+      properties:
+        login:
+          type: string
+        id:
+          type: number
+        node_id:
+          type: string
+        avatar_url:
+          type: string
+        gravatar_id:
+          type: string
+        url:
+          type: string
+        html_url:
+          type: string
+        followers_url:
+          type: string
+        following_url:
+          type: string
+        gists_url:
+          type: string
+        starred_url:
+          type: string
+        subscriptions_url:
+          type: string
+        organizations_url:
+          type: string
+        repos_url:
+          type: string
+        events_url:
+          type: string
+        received_events_url:
+          type: string
+        type:
+          type: string
+        site_admin:
+          type: boolean
+        name:
+          type: string
+        company:
+          type: string
+        blog:
+          type: string
+        location?:
+          type: any
+        email:
+          type: string
+        hireable?:
+          type: any
+        bio?:
+          type: any
+        twitter_username:
+          type: string
+        public_repos:
+          type: number
+        public_gists:
+          type: number
+        followers:
+          type: number
+        following:
+          type: number
+        created_at:
+          type: string
+        updated_at:
+          type: string
+        private_gists:
+          type: number
+        total_private_repos:
+          type: number
+        owned_private_repos:
+          type: number
+        disk_usage:
+          type: number
+        collaborators:
+          type: number
+        two_factor_authentication:
+          type: boolean
     GitUrl:
       type: object
       properties:
         url:
           type: string
 
+    Success:
+      type: object
+      properties:
+        success:
+          type: boolean
     Error:
       type: object
       properties:

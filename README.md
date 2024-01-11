@@ -18,7 +18,7 @@ npm start
 
 ## Environment Variables
 
-The environment variables can be found and modified in the `.env` file. They come with these default values:
+The environment variables can be found in .env.example and modified in to `.env` file. They come with these default values:
 
 ```bash
 # Port number
@@ -26,6 +26,11 @@ PORT=3000
 
 # URL of the Mongo DB
 MONGODB_URL=mongodb://127.0.0.1:27017/node-task
+
+# Github
+CLIENT_ID=clientID
+CLIENT_SECRET=clientSecret
+REDIRECT_URI=http://localhost:4200/redirect
 ```
 
 ## Project Structure

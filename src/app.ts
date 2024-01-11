@@ -10,6 +10,14 @@ import { errorHandler } from './middlewares/global';
 import ApiError from './helpers/ApiError';
 import { appController } from './controllers';
 
+declare global {
+  namespace Express {
+    interface Request {
+      username: string;
+    }
+  }
+}
+
 const app = express();
 
 if (APP_ENV.NODE_ENV !== 'test') {
@@ -32,6 +40,12 @@ app.use(compression());
 // enable cors
 app.use(cors());
 app.options('*', cors());
+
+// TODO:: Remove on implementation of Jwt user
+app.use((req, res, next) => {
+  req.username = 'tester';
+  next();
+});
 
 app.get('/', appController.getInfo);
 
